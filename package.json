@@ -4,7 +4,7 @@
   "description": "HTML5 / CSS3 / Bootstrap / Animate On Scroll (AOS)",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"no tests"
+    "test": "echo \"no tests\""
   },
   "author": "Eric Chung",
   "license": "ISC",
