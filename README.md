@@ -1,1 +1,1 @@
-HTML5 / CSS3 / Bootstrap / Animate On Scroll (AOS)
+Built with HTML5 / CSS3 / Bootstrap / jQuery

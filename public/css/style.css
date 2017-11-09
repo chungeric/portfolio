@@ -111,12 +111,59 @@ body {
 }
 
 .about-section {
-    height: 500px;
     width: 100%;
+    background: #59819a;
+    color: #ffffff;
 }
 
-.skills-section {
-    height: 1500px;
+.about-left {
     width: 100%;
-    background: #888;
+    height: 100%;
+}
+
+.about-right {
+    font-family: 'OpenSans';
+    padding: 60px 0;
+    width: 100%;
+    height: 100%;
+    font-size: 1em;
+}
+
+.portrait-wrapper {
+    margin: auto;
+}
+
+.portrait {
+    margin: 60px auto 15px auto;
+    width: 140px;
+    height: 140px;
+    border-radius: 50%;
+    background-image: url("../images/portrait.jpg");
+    background-size: cover;
+    box-shadow: 8px 6px rgba(0, 0, 0, 0.3);
+}
+
+.social-links {
+    letter-spacing: 10px;
+    font-size: 2em;
+    /*text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.3);*/
+    margin-left: 12px;
+}
+
+
+.skills-section {
+    padding-top: 60px;
+    font-family: 'OpenSans';
+    font-size: 1em;
+    color: #ffffff;
+    height: 500px;
+    width: 100%;
+    background: #22303e;
+}
+
+.portfolio-section {
+    height: 1800px;
+    width: 100%;
+    color: #000000;
+    padding-top: 60px;
 }
