@@ -146,16 +146,14 @@ body {
 .social-links {
     letter-spacing: 10px;
     font-size: 2em;
-    /*text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.3);*/
     margin-left: 12px;
 }
 
 .skills-section {
-    padding-top: 60px;
+    padding: 60px 0 90px 0;
     font-family: 'OpenSans';
     font-size: 1em;
     color: #ffffff;
-    height: 500px;
     width: 100%;
     background: #22303e;
 }
@@ -179,9 +177,57 @@ body {
     height: 100%;
 }
 
+.portfolio-wrapper {
+    /*padding-left: 75px;*/
+}
+
 .portfolio-section {
-    height: 1800px;
+    font-family: 'OpenSans';
     width: 100%;
     color: #000000;
-    padding-top: 60px;
+    padding: 60px 0 90px 0;
+}
+
+.portfolio-row {
+    padding-top: 50px;
+}
+
+.card {
+    margin: 0 auto;
+}
+
+.card-img-top {
+    height: 200px;
+}
+
+.card-block {
+    padding: 20px;
+}
+
+.contact-section {
+    font-family: 'OpenSans';
+    color: #ffffff;
+    background: #1A2145;
+    padding: 60px 0 90px 0;
+}
+
+.footer {
+    font-family: 'OpenSans';
+    color: #A7A7A7;
+    background: #292929;
+    padding: 20px;
+    font-size: 0.8em;
+}
+
+.footer .fa-github, .footer .fa-linkedin {
+    color: #ffffff;
+    font-size: 1.5em;
+}
+
+.footer .fa-copyright {
+    font-size: 1em;
+}
+
+.footer-el {
+    padding-right: 20px;
 }
