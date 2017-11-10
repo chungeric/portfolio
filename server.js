@@ -11,5 +11,5 @@ app.get('/', (req, res) => {
 });
 
 app.listen(app.get('port'), function() {
-    console.log("express started")
+    console.log("express: listening on port 3000")
 });
