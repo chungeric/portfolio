@@ -203,7 +203,7 @@ body {
 }
 
 .skills-section {
-    padding: 90px 0 120px 0;
+    padding: 55px 0 120px 0;
     font-family: 'OpenSans';
     font-size: 1em;
     color: #ffffff;
@@ -211,9 +211,9 @@ body {
     background: #22303e;
 }
 
-.skills-wrapper {
+/*.skills-wrapper {
     padding-left: 75px;
-}
+}*/
 
 .skill-row {
     padding-top: 30px;
@@ -231,8 +231,6 @@ body {
     height: 100%;
 }
 
-.portfolio-wrapper {}
-
 .portfolio-section {
     font-family: 'OpenSans';
     width: 100%;
@@ -240,8 +238,8 @@ body {
     padding: 90px 0;
 }
 
-.portfolio-row {
-    padding-top: 50px;
+.portfolio-card-wrap {
+    margin-top: 50px;
 }
 
 .card {
@@ -314,3 +312,9 @@ body {
     color: #D8D8D8;
     cursor: pointer;
 }
+
+/*@media screen and (max-width: 1024px) {
+    .portfolio-section {
+        color: #ffffff;
+    }
+}*/
