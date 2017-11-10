@@ -270,7 +270,7 @@ body {
     font-family: 'OpenSans';
     color: #ffffff;
     background: #1A2145;
-    padding: 60px 0 90px 0;
+    padding: 70px 0 110px 0;
 }
 
 .form-control {
@@ -313,8 +313,11 @@ body {
     cursor: pointer;
 }
 
-/*@media screen and (max-width: 1024px) {
-    .portfolio-section {
-        color: #ffffff;
+@media screen and (max-width: 540px) {
+    .abstract .heading {
+        font-size: 3.7em;
     }
-}*/
+    .banner {
+        padding-top: 150px;
+    }
+}
