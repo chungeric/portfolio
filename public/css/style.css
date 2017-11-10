@@ -90,16 +90,22 @@ body {
     background-image: url("../images/macbook.jpg");
     background-size: cover;
     background-position: bottom;
-    padding-top: 220px;
 }
 
 .abstract {
+    position: absolute;
+    top: 40%;
+    transform: translateY(-50%);
     width: auto;
     height: auto;
 }
 
 .heading {
     display: inline;
+}
+
+.abstract .heading {
+    font-size: 5em;
 }
 
 .subtitle {
