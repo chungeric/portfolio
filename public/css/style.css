@@ -86,6 +86,10 @@ body {
     padding-bottom: 3px;
 }
 
+#cross {
+    display: none;
+}
+
 .banner {
     background-image: url("../images/macbook.jpg");
     background-size: cover;
