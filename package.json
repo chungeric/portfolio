@@ -2,8 +2,9 @@
   "name": "portfolio-site",
   "version": "1.0.0",
   "description": "HTML5 / CSS3 / Bootstrap / Animate On Scroll (AOS)",
-  "main": "index.js",
+  "main": "server.js",
   "scripts": {
+    "start": "node server.js",
     "test": "echo \"no tests\""
   },
   "author": "Eric Chung",
@@ -11,8 +12,10 @@
   "dependencies": {
     "aos": "^2.2.0",
     "bootstrap": "^4.0.0-beta.2",
+    "express": "^4.16.2",
     "jquery": "^3.2.1",
     "popper.js": "^1.12.6",
+    "pug": "^2.0.0-rc.4",
     "typed.js": "^2.0.6"
   }
 }
