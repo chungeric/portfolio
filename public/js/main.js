@@ -17,7 +17,7 @@ $(window).scroll(function() {
     } else if ($(this).scrollTop()>vph) {
         lowerNavCSS();
         $('.navigation').fadeIn(200);
-    } else {
+    } else if ($(this).scrollTop() == 0) {
         topNavCSS();
         $('.navigation').fadeIn(200);
     }
