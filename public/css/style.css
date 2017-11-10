@@ -47,17 +47,40 @@ body {
 .navigation ul li {
     list-style-type: none;
     display: inline-block;
-    padding: 0 3em;
+    padding: 0 1.8em;
 }
 
 .navigation ul li.resume-link {
     padding: 2px 8px;
-    border: 2px solid #E4E4E4;
+    border: 2px solid #DADADA;
     margin-left: 28px;
+    cursor: pointer;
+}
+
+.navigation ul li.resume-link a {
+    border: none;
+}
+.navigation ul li.resume-link a:hover {
+    border: none;
+    color: #DADADA;
 }
 
 .navigation ul li a {
-    color: #E4E4E4;
+    color: #DADADA;
+    border-bottom: 2px solid #000000;
+    transition: ease-in 0.3s;
+}
+
+.navigation ul li a.active {
+    padding-bottom: 9px;
+    border-bottom: 2px solid #DADADA;
+}
+
+.navigation ul li a:hover {
+    text-decoration: none;
+    color: #AFAFAF;
+    border-bottom: 2px solid #AFAFAF;
+    padding-bottom: 9px;
 }
 
 .banner {
@@ -86,6 +109,14 @@ body {
     font-size: 5em;
 }
 
+.fa-chevron-down {
+    transition: ease-in 0.2s;
+}
+
+.fa-chevron-down:hover {
+    transform: translateY(10px);
+    cursor: pointer;
+}
 .typed-cursor {
     font-size: 5em;
     animation: blink 1.2s infinite;
