@@ -33,54 +33,63 @@ body {
 }
 
 .navigation {
-    font-family: 'OpenSans';
-    font-size: 14px;
+    font-family: 'OpenSansSemibold';
+    font-size: 0.75em;
     padding: 14px 0 0 0;
     text-align: center;
     position: fixed;
     width: 100%;
-    background: #000000;
     z-index: 1;
-    box-shadow: 0 3px 7px 2px rgba(0, 0, 0, 0.3);
+    /*This is for after banner*/
+    /*background: #000000;*/
+    /*box-shadow: 0 3px 7px 2px rgba(0, 0, 0, 0.3);*/
 }
 
 .navigation ul li {
     list-style-type: none;
     display: inline-block;
-    padding: 0 1.8em;
+    padding: 0 2.2em;
 }
 
 .navigation ul li.resume-link {
     padding: 2px 8px;
-    border: 2px solid #DADADA;
     margin-left: 28px;
     cursor: pointer;
+    border: 2px solid #252525;
+    /*This is for after banner*/
+    /*border: 2px solid #DADADA;*/
 }
 
+/* This stops resume link from getting effects of hover */
 .navigation ul li.resume-link a {
     border: none;
 }
 .navigation ul li.resume-link a:hover {
     border: none;
-    color: #DADADA;
+    color: #252525;
 }
 
 .navigation ul li a {
-    color: #DADADA;
-    border-bottom: 2px solid #000000;
-    transition: ease-in 0.3s;
+    /*This is for after banner*/
+    /*color: #DADADA;
+    border-bottom: 2px solid #000000;*/
+    color: #252525;
+    border: none;
+    transition: ease-in 0.15s;
+    letter-spacing: 1px;
 }
 
 .navigation ul li a.active {
-    padding-bottom: 9px;
-    border-bottom: 2px solid #DADADA;
+    padding-bottom: 3px;
+    /*border-bottom: 2px solid #DADADA;*/
+    border-bottom: 2px solid #252525;
 }
 
 .navigation ul li a:hover {
     text-decoration: none;
-    color: #AFAFAF;
-    border-bottom: 2px solid #AFAFAF;
-    padding-bottom: 9px;
+    color: #4F4F4F;
+    border-bottom: 2px solid #4F4F4F;
+    padding-bottom: 3px;
 }
 
 .banner {
