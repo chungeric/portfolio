@@ -313,11 +313,54 @@ body {
     cursor: pointer;
 }
 
+.navigation .hamburger-wrap {
+    display: none;
+    font-size: 3em;
+    float: right;
+    padding-right: 30px;
+    color: #252525;
+    margin-top: -12px;
+}
+
 @media screen and (max-width: 540px) {
     .abstract .heading {
         font-size: 3.7em;
     }
     .banner {
         padding-top: 150px;
+    }
+}
+
+
+@media screen and (max-width: 815px) {
+    .navigation .hamburger-wrap {
+        display: inline-block;
+        cursor: pointer;
+    }
+
+    .navigation ul {
+        display: none;
+        position: absolute;
+        width: 100%;
+        margin: 40px 0;
+    }
+
+    .navigation ul li {
+        text-align: center;
+        width: 100%;
+        border: none;
+        padding: 8px 0;
+    }
+
+    .navigation ul li a.active {
+        padding: 0;
+        border: none;
+    }
+
+    .navigation ul li.resume-link {
+        padding: 0;
+        margin: 0;
+        border: none;
+        padding: 8px 0 20px 0;
     }
 }
