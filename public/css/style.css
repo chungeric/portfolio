@@ -94,12 +94,13 @@ body {
     background-image: url("../images/macbook.jpg");
     background-size: cover;
     background-position: bottom;
+    padding-top: 150px;
 }
 
 .abstract {
-    position: absolute;
+    /*position: absolute;
     top: 40%;
-    transform: translateY(-50%);
+    transform: translateY(-50%);*/
     width: auto;
     height: auto;
 }
@@ -332,9 +333,15 @@ body {
     margin-top: -12px;
 }
 
+@media screen and (max-width: 768px) {
+    .abstract .heading {
+        font-size: 4em;
+    }
+}
+
 @media screen and (max-width: 540px) {
     .abstract .heading {
-        font-size: 3.7em;
+        font-size: 3.22em;
     }
     .banner {
         padding-top: 150px;
@@ -342,6 +349,7 @@ body {
 }
 
 @media screen and (max-width: 815px) {
+
     .navigation .hamburger-wrap {
         display: inline-block;
         cursor: pointer;
