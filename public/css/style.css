@@ -94,16 +94,18 @@ body {
     background-image: url("../images/macbook.jpg");
     background-size: cover;
     background-position: bottom;
-    padding-top: 150px;
+    position: relative;
+    padding: 200px 9% 0 9%;
 }
 
 .abstract {
-    /*position: absolute;
+    position: absolute;
     top: 40%;
-    transform: translateY(-50%);*/
-    width: auto;
+    transform: translateY(-50%);
     height: auto;
+    width: 82%;
 }
+
 
 .heading {
     display: inline;
@@ -343,9 +345,9 @@ body {
     .abstract .heading {
         font-size: 3.22em;
     }
-    .banner {
+    /*.banner {
         padding-top: 150px;
-    }
+    }*/
 }
 
 @media screen and (max-width: 815px) {
