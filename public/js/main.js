@@ -1,7 +1,9 @@
 $(document).ready(function(){
     resizeDiv();
     topNavCSS($(window).width());
+    // Initalizes Animate On Scroll library - https://michalsnik.github.io/aos/
     AOS.init();
+    // Options for typed.js library - http://www.mattboldt.com/demos/typed-js/
     var options = { strings: ["Hi,^1000 I'm Eric"], typeSpeed: 80, startDelay: 2000 };
     var typed = new Typed(".heading", options);
 });
@@ -84,7 +86,10 @@ function resizeDiv() {
     $(".banner").css({"height": vph + "px"});
 }
 
-// http://jsfiddle.net/9SDLw/
+/*
+ * http://jsfiddle.net/9SDLw/
+ * Smooth scrolling
+*/
 $('a').click(function(){
     $('html, body').animate({
         scrollTop: $( $(this).attr('href') ).offset().top
@@ -92,14 +97,30 @@ $('a').click(function(){
     return false;
 });
 
-$("#hamburger").click(function() {
+
+
+/*
+ * Collapsed menu icon click events
+*/
+
+function crossClick() {
+    $(".navigation").find("ul").css("display", "none");
+    $("#cross").hide();
+    $("#hamburger").off("click");
+    $("#hamburger").slideDown(300, "swing", function() {
+        $("#hamburger").on("click", hamburgerClick);
+    });
+}
+
+function hamburgerClick() {
     $(".navigation").find("ul").css("display", "block");
     $("#hamburger").hide();
-    $("#cross").slideDown(500, "swing");
-});
+    $("#cross").off("click");
+    $("#cross").slideDown(300, "swing", function() {
+        $("#cross").on("click", crossClick);
+    });
+}
 
-$("#cross").click(function() {
-    $(".navigation").find("ul").css("display", "none");
-    $("#hamburger").slideDown(500, "swing");
-    $("#cross").hide();
-});
+$("#hamburger").on("click", hamburgerClick);
+
+$("#cross").on("click", crossClick);
