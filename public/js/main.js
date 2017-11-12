@@ -31,6 +31,11 @@ window.onresize = function(event) {
 }
 
 $(window).scroll(function() {
+    /*
+     * NEED TO FIND A WAY TO MAKE SURE THAT CODE ONLY TRIGGERS WHEN WE SWITCH
+     * BOUNDARIES, RATHER THAN ALL THE TIME WHILE WE'RE SCROLLING.
+     * - - MAYBE SAVE CURRENT SECTION IN A VARIABLE AND TEST AGAINST THAT - -
+     */
     checkSection(function(checked) {
         if (checked) {
             let vph = $(window).height();
