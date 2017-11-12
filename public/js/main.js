@@ -1,6 +1,12 @@
 $(document).ready(function(){
     resizeDiv();
-    topNavCSS($(window).width());
+    let vph = $(window).height();
+    let vpw = $(window).width();
+    if ($(window).scrollTop()>vph-1) {
+        lowerNavCSS(vpw);
+    } else if ($(window).scrollTop() <= 80) {
+        topNavCSS(vpw);
+    }
     // Initalizes Animate On Scroll library - https://michalsnik.github.io/aos/
     AOS.init();
     // Options for typed.js library - http://www.mattboldt.com/demos/typed-js/
@@ -14,9 +20,10 @@ $(window).on('load', function () {
 
 window.onresize = function(event) {
     resizeDiv();
+    // checkSection();
     let vph = $(window).height();
     let vpw = $(window).width();
-    if ($(window).scrollTop()>vph-1) {
+    if ($(window).scrollTop()>vph) {
         lowerNavCSS(vpw);
     } else if ($(window).scrollTop() <= 80) {
         topNavCSS(vpw);
@@ -24,18 +31,41 @@ window.onresize = function(event) {
 }
 
 $(window).scroll(function() {
-    let vph = $(window).height();
-    let vpw = $(window).width();
-    if ($(this).scrollTop() > 80 && $(this).scrollTop() < vph) {
-        $('.navigation').fadeOut(200);
-    } else if ($(this).scrollTop()>vph-1) {
-        lowerNavCSS(vpw);
-        $('.navigation').fadeIn(200);
-    } else if ($(this).scrollTop() <= 80) {
-        topNavCSS(vpw);
-        $('.navigation').fadeIn(200);
-    }
+    checkSection(function(checked) {
+        if (checked) {
+            let vph = $(window).height();
+            let vpw = $(window).width();
+            if ($(this).scrollTop() > 80 && $(this).scrollTop() < vph) {
+                $('.navigation').fadeOut(200);
+            } else if ($(this).scrollTop()>vph-1) {
+                lowerNavCSS(vpw);
+                $('.navigation').fadeIn(200);
+            } else if ($(this).scrollTop() <= 80) {
+                topNavCSS(vpw);
+                $('.navigation').fadeIn(200);
+            }
+        }
+    });
+
 });
+
+function checkSection(callback) {
+    let wintop = $(window).scrollTop();
+    if (wintop >= 0 && wintop < $("#about").offset().top) {
+        $(".navigation a").removeClass("active");
+        $("a#home-link").addClass("active");
+    } else if ($(window).scrollTop() >= $("#about").offset().top && $(window).scrollTop() < $("#portfolio").offset().top) {
+        $(".navigation a").removeClass("active");
+        $("a#about-link").addClass("active");
+    } else if ($(window).scrollTop() >= $("#portfolio").offset().top && $(window).scrollTop() < $("#contact").offset().top) {
+        $(".navigation a").removeClass("active");
+        $("a#portfolio-link").addClass("active");
+    } else if ($(window).scrollTop() >= $("#contact").offset().top) {
+        $(".navigation a").removeClass("active");
+        $("a#contact-link").addClass("active");
+    }
+    return callback(true);
+}
 
 function topNavCSS(vpw) {
     if (vpw > 800) {
@@ -43,6 +73,7 @@ function topNavCSS(vpw) {
         $('.navigation').find("li.resume-link").css("background", "");
         $('.navigation').find("li").css("background", "");
         $('.active').css("border-bottom", "2px solid #252525");
+        $('.navigation a').not(".active").css("border-bottom", "none");
         $(".navigation").find("ul").css("display", "block");
     } else {
         $('.navigation').find("li.resume-link").css("border", "none");
@@ -65,6 +96,7 @@ function lowerNavCSS(vpw) {
         $('.navigation').find("li.resume-link").css("background", "#000000");
         $('.navigation').find("li").css("background", "#000000");
         $('.active').css("border-bottom", "2px solid #DADADA");
+        $('.navigation a').not(".active").css("border-bottom", "none");
         $(".navigation").find("ul").css("display", "block");
     } else {
         $('.navigation').find("li.resume-link").css("border", "none");
