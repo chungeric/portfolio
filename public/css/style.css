@@ -292,8 +292,12 @@ body {
 
 .contact-btn {
     font-family: 'OpenSansSemibold';
-    background: #EDEDED;
-    color: #1E1E1E;
+    background: #737373;
+    color: #D1D1D1;
+}
+
+.contact-section .btn-primary {
+    cursor: pointer;
 }
 
 .footer {
