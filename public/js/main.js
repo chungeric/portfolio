@@ -133,7 +133,7 @@ $('a').click(function(){
     }, {
         duration: 1300,
         specialEasing: {
-          scrollTop: "easeInOutExpo"
+          scrollTop: "easeInOutQuart"
         }
     });
     return false; // important
