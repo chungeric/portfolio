@@ -130,8 +130,13 @@ function resizeDiv() {
 $('a').click(function(){
     $('html, body').animate({
         scrollTop: $( $(this).attr('href') ).offset().top
-    }, 500);
-    return false;
+    }, {
+        duration: 1300,
+        specialEasing: {
+          scrollTop: "easeInOutExpo"
+        }
+    });
+    return false; // important
 });
 
 
