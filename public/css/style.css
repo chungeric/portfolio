@@ -282,7 +282,12 @@ body {
 .contact-section {
     font-family: 'OpenSans';
     color: #ffffff;
-    background: #1A2145;
+    /*background: #1A2145;*/
+    background: #1D1E31;
+    background-image: url("/images/working.jpg");
+    background-size: cover;
+    background-blend-mode: multiply;
+    background-attachment: fixed;
     padding: 125px 0 110px 0;
 }
 
@@ -303,7 +308,8 @@ body {
 .footer {
     font-family: 'OpenSans';
     color: #A7A7A7;
-    background: #292929;
+    /*background: #292929;*/
+    background: #1B1B1B;
     padding: 20px;
     font-size: 0.8em;
 }
