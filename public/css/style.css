@@ -53,6 +53,7 @@ body {
     margin-left: 28px;
     cursor: pointer;
     border: 2px solid #252525;
+    letter-spacing: 1px;
 }
 
 /* * * This stops resume link from getting effects of `a` hover * * */
@@ -215,6 +216,29 @@ body {
     margin-left: 12px;
 }
 
+.about-resume-link, .about-mockup-link {
+    margin: 40px;
+    font-size: 12px;
+    font-family: OpenSansBold;
+
+}
+
+.about-resume-link a, .about-mockup-link a {
+    color: #365366;
+    width: auto;
+    padding: 6px 12px;
+    transition: ease 0.4s;
+    letter-spacing: 1px;
+    background: #DCDCDC;
+}
+
+.about-resume-link a:hover, .about-mockup-link a:hover {
+    color: #121528;
+    text-decoration: none;
+    background: #CFCFCF;
+    box-shadow: 0 2px 3px 1px rgba(0,0,0,0.1);
+}
+
 .skills-section {
     padding: 55px 0 120px 0;
     font-family: 'OpenSans';
@@ -328,11 +352,11 @@ body {
 }
 
 .fa-github, .fa-linkedin, .fa-free-code-camp {
-    color: #ffffff;
+    color: #3F5576;
 }
 
 .fa-github:hover, .fa-linkedin:hover, .fa-free-code-camp:hover {
-    color: #D8D8D8;
+    color: #DDDDDD;
     cursor: pointer;
 }
 
