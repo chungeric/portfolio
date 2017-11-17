@@ -255,6 +255,8 @@ body {
 
 .skill-row {
     padding-top: 30px;
+    display: flex;
+    align-items: flex-end;
 }
 
 .skill-bar {
