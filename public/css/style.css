@@ -172,8 +172,10 @@ body {
 .abstract h3 {
     color: #252525;
     font-family: 'OpenSans';
-    font-size: 14px;
+    font-size: 20px;
     letter-spacing: 1px;
+    font-weight: bold;
+    line-height: 1.3em;
 }
 
 .about-section {
@@ -376,11 +378,17 @@ body {
     .abstract .heading {
         font-size: 4em;
     }
+    .abstract h3 {
+        font-size: 18px;
+    }
 }
 
 @media screen and (max-width: 540px) {
     .abstract .heading {
         font-size: 3.22em;
+    }
+    .abstract h3 {
+        font-size: 18px;
     }
     /*.banner {
         padding-top: 150px;
